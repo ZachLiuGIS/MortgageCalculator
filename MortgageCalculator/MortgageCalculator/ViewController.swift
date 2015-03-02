@@ -12,9 +12,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loanAmount.delegate = self
-        loanTerm.delegate = self
-        loanRate.delegate = self
         
         loanAmount.text = "168750"
         loanTerm.text = "30"
@@ -24,17 +21,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var loanTerm: UITextField!
 
-    @IBOutlet weak var loanRate: UITextField!
+    @IBOutlet weak var loanRate: UILabel!
     
     @IBOutlet weak var monthlyPayment: UILabel!
     
+    @IBOutlet weak var rateSlider: UISlider!
     //get test data
     
     
     @IBAction func calculateMontylyPayment(sender: AnyObject) {
         let loan = (loanAmount.text as NSString).doubleValue
         let term = (loanTerm.text).toInt()! * 12
-        let rate = (loanRate.text as NSString).doubleValue
+        let rate = (loanRate.text! as NSString).doubleValue
         
         MortgageCalculationClass.getPaymentSchedule(loan, termMonth: term, interestRate: rate)
         
@@ -42,6 +40,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         monthlyPayment.text = NSString(format: "%.2f", payment)
     }
     
+    @IBAction func rateSliderChange(sender: UISlider) {
+        let value = Double(Int(rateSlider.value * 1000) / 125) * 0.125
+        loanRate.text = NSString(format: "%.3f", value)
+    }
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true;
