@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:MortgageCalculator"
+      name = "MortgageCalculator">
+      <FileRef
+         location = "group:../MortgageCalculation.playground">
+      </FileRef>
+      <FileRef
+         location = "group:MortgageCalculator.xcodeproj">
+      </FileRef>
+      <Group
+         location = "group:MortgageCalculator"
+         name = "MortgageCalculator">
+         <FileRef
+            location = "group:AppDelegate.swift">
+         </FileRef>
+         <Group
+            location = "group:Base.lproj"
+            name = "Base.lproj">
+            <FileRef
+               location = "group:LaunchScreen.xib">
+            </FileRef>
+            <FileRef
+               location = "group:Main.storyboard">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Images.xcassets"
+            name = "Images.xcassets">
+            <Group
+               location = "group:AppIcon.appiconset"
+               name = "AppIcon.appiconset">
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+            </Group>
+         </Group>
+         <FileRef
+            location = "group:Info.plist">
+         </FileRef>
+         <FileRef
+            location = "group:MortgageCalculationClass.swift">
+         </FileRef>
+         <FileRef
+            location = "group:ViewController.swift">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:MortgageCalculatorTests"
+         name = "MortgageCalculatorTests">
+         <FileRef
+            location = "group:Info.plist">
+         </FileRef>
+         <FileRef
+            location = "group:MortgageCalculatorTests.swift">
+         </FileRef>
+      </Group>
+   </Group>
+</Workspace>
